@@ -2,7 +2,7 @@ function countLetters(str){
   var letters = str.replace(/\s/g,'').split('');
   var totals = {
     create: function(property){
-      totals[property] = 1;
+      this[property] = 1;
     }
   };
 
@@ -11,10 +11,10 @@ function countLetters(str){
   for (var i = 0; i < letters.length; i++){
     if (!totals[letters[i]]) {
       totals.create(letters[i]);
-      console.log(totals[letters[i]], 'created')
+      // console.log(totals[letters[i]], 'created')
     } else {
       totals[letters[i]]++;
-      console.log(totals[letters[i]]);
+      // console.log(totals[letters[i]]);
     }
   };
   return totals;
